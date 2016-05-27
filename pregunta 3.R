@@ -1,0 +1,8 @@
+set.seed(20)
+H0<-sapply(rep(60,100000),function(x)
+           {abs(mean(rgamma(x,2,3))-mean(rgamma(x,2,3)))})
+H1<-sapply(rep(60,100000),function(x)
+           {abs(mean(rnorm(x,1,0.4))-mean(rnorm(x,1,0.4)))})
+hist(H0,breaks = seq(0,4,0.1),col=rgb(1,0,0,0.5),xlim =  c(0,0.4))
+hist(H1,breaks = seq(0,4,0.1),col=rgb(0,0,1,0.5),add=T)
+try<-abs(mean(rgamma(20,2,3))-var(rgamma(20,2,3)))
