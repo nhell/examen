@@ -5,6 +5,9 @@ y<-datos$y; #flujo
 z<-datos$z; #error
 y1<-y-z;
 y2<-y+z;
+#arrows(x,y1,x,y2,length = 0.5,angle=90,code=3,col = "red")
+
+
 
 plot(x,y ,xlim = c(0,11))
 
